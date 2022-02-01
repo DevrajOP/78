@@ -1,23 +1,22 @@
-
-var reasons = [
-  "Dad",
-  "Me",
-  "Mom",
-
-];
-var images = [
- "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWJW9f2df8ibmWPwTui-rpByNkBffoOJ80g&usqp=CAU",
-  "https://w7.pngwing.com/pngs/665/604/png-transparent-baby-boss-boy-character-illustration-the-boss-baby-brother-dreamworks-animation-film-the-boss-baby-child-toddler-boy.png",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6LcEVcyZ-Ien9ulvh-WBZrOTa6lm8gNnk6A&usqp=CAU"
-];
-
+var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg","https://i.postimg.cc/qqyYvVbq/grandpa.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+var names = ["Family Book","Sunildatta Khairnar", "Sunad Khairnar", "Devraj Mane", "Pooja Khairnar", "Shashwati Khairnar"];
 var i = 0;
-function nextslide() {  document.getElementById("reasontext").innerHTML = reasons[i];
-  document.getElementById("album").src = images[i];
-  i++;
-                      document.getElementById("audio").play();
+function update()
+{
+    i++;
+    var numbers_of_family_member_in_array = 5
+    if(i > numbers_of_family_member_in_array)
+      {
+          i = 0;
+      }
+    
+    //Debug the code to store list of images in updatedImage. Use images[i]
+    var updatedImage = images[i];
+    //Debug the code to store list of names in updatedName. Use names[i]
+    var updatedName = names [i];
  
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
 }
 
-
-
+  
